@@ -1,0 +1,22 @@
+@use './variable' as * ;
+
+
+
+@mixin flexAlignCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin textFloor($margin,$fontsize1,$fontweight1){
+    margin-top: $margin;
+    font-size: $fontsize1;
+    font-weight: $fontweight1;
+    text-align: center;
+}

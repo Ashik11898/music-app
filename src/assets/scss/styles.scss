@@ -1,0 +1,32 @@
+@use './Layout';
+@use './header';
+@use './dashboard';
+@use './profile.scss';
+@use './minicomponents.scss';
+@use './floor.scss';
+@use './variable' as * ;
+
+
+.page-parent{
+    width: 100%;
+    padding: $spacingall;
+    box-sizing: border-box;
+}
+
+.dashboardPage-parent{
+   color: $white;
+    
+}
+
+.profilePage-parent{
+    background-color: $white;
+    height: 100%;
+}
+
+
+
+.edit-profile-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}

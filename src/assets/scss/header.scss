@@ -1,0 +1,29 @@
+@use './mixin' as *;
+@use './variable' as * ;
+
+.header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 94% 80px;
+    padding: $paddingtop $padding;
+    color: $white;
+  }
+  
+  .left {
+    display: flex;
+    flex-direction: column;
+    .content {
+        font-size: $headfont;
+        font-weight: $fontweight2;
+      }
+      
+      .subcontent {
+        font-size: $fontsize1;
+        margin-top: 15px;
+      }
+  }
+  
+  
+  .right{}
+  
+ 

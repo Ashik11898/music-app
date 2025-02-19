@@ -1,0 +1,19 @@
+@use './variable' as * ;
+
+.profile-container {
+    width: 100%;
+    .profile-section {
+      margin-bottom: 1.5rem;
+      .profile-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      .profile-items {
+        list-style: none;
+        padding: 0;
+        background: $backColor3;
+      }
+    }
+  }
+  

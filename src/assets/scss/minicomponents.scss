@@ -1,0 +1,104 @@
+@use './variable' as * ;
+@use './mixin.scss' as *;
+
+// in profile page
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem;
+    background: $backColor3;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    
+    .list-icon {
+      width: 20px;
+      height: 20px;
+    }
+    
+    &:hover {
+      background: $hovercolor2;
+    }
+}
+
+/* ProfilePicture.scss */
+.profile-picture {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacingall;
+  
+    .profile-image {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: $margin;
+    }
+}
+
+/* EditableForm.scss */
+.profile-form {
+    width: 100%;
+    box-sizing: border-box;
+  
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+  
+      label {
+        font-size: $fontsize1;
+        font-weight: $fontweight1;
+        margin-bottom: 5px;
+      }
+  
+      input {
+        padding: $margin;
+        border-radius: 5px;
+        border: 1px solid $borderInput;
+        font-size: $fontsize1;
+        outline: none;
+  
+        &:focus {
+          border-color: #007bff;
+        }
+      }
+    }
+  
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  
+      
+    }
+}
+
+
+/* FloorList.scss */
+.floor-list {
+  display: flex;
+  max-width: 428px;
+  gap: 20px;
+
+  .floor-item {
+    @include flexAlignCenter;
+    position: relative;
+  }
+
+  .floor-icon {
+    width: 75px;
+    height: 78px;
+    border-radius: 14px;
+    border: 1px solid $borderDahed;
+    @include flexCenter;
+  }
+
+  
+}
+
+  
+  
+  

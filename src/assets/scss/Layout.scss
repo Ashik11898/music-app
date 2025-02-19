@@ -1,0 +1,66 @@
+@use './mixin' as *;
+@use './variable' as * ;
+
+.layout {
+  display: grid;
+  grid-template-columns: 25% 75%; 
+  height: 100%;
+  position: absolute;
+  width: 100%;
+    .sidebar {
+      min-width: 325px; 
+      background-color: $backColor1;
+      padding: 107px 0px 0 0px;
+      box-sizing: border-box;
+      user-select: none;
+
+      ul{
+        padding: 0;
+        .navli-bar{
+          color:$fontcolor1;
+          font-size: $fontsize2;
+          font-weight: $fontweight1;
+          position: relative;
+          padding: 20px 0px 20px 40px;
+          box-sizing: border-box;
+          min-height: 65px;
+          margin-top: 20px;
+          cursor: pointer;
+          @include flexAlignCenter;
+            .navbar-li-parent{
+              width: 100%;
+              display: flex;
+              align-items: center;
+              gap: 15px;
+                }
+            ul{
+              width: 100%;
+              padding-left: 90px;
+              margin-top: $margin;
+              background-color: unset;
+              list-style-type: none;
+              li{
+                margin-top: $margintop;
+                display: flex;
+                align-items: center;
+                gap:$margin;
+              }
+            }
+
+            span{
+              position: absolute;
+              right: 15px;
+              font-size: 23px;
+            }
+            &:hover{
+              background-color: $hovercolor;
+            }
+        }
+      }
+    }
+    .content {
+      min-width: 955px; /* Fixed width for the right side */
+      background-color: #0E181E; /* Example background */
+    }
+  }
+  

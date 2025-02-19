@@ -1,0 +1,31 @@
+@use './variable' as * ;
+@use './mixin.scss' as *;
+
+.floor_manage_parent{
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .floor_head{
+        display: flex; 
+        justify-content: space-between; 
+        width:100%;
+        .floor-title-head{
+            @include textFloor($margin,$fontsize2,$fontweight1);
+        }
+    }
+    .floor-body{width: 100%;display: flex;gap:30px}
+    .add-floor{
+        width: 75px;
+        height: 78px;
+        border-radius: 14px;
+        border:3px dashed $borderDahed;
+        background:$backColor4 url("../icons/plus.png") no-repeat center;
+        cursor: pointer;
+        box-sizing: border-box;
+
+    }
+    .floor-title {
+       @include textFloor($margin,$fontsize1,$fontweight1);
+    }
+}
